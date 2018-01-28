@@ -1,0 +1,15 @@
+<aura:component implements="flexipage:availableForAllPageTypes" >
+    <aura:attribute name="featureActive" type="Boolean"/>
+    <lightning:card>
+        <aura:set attribute="title">Analysis</aura:set>
+        <p class="slds-p-horizontal_small">
+            <div>
+                <aura:if isTrue="{!v.featureActive}">
+                    <ltng:require scripts="{!$Resource.ChartJS}" afterScriptsLoaded="{!c.chartJSLoaded}" />
+                    <canvas aura:id="chart" height="280"></canvas>
+                </aura:if>            
+            </div>
+            <c:featureFeedback feature="WidgetAnalysis" activated="{!v.featureActive}"/>
+        </p>
+    </lightning:card>    
+</aura:component>	

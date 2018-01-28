@@ -1,0 +1,27 @@
+<aura:component controller="FeatureFeedbackController">
+    <aura:attribute name="feature" type="string" access="public"/>
+    <aura:attribute name="activated" type="boolean" access="public"/>
+    <aura:attribute name="ratings" type="List"/>
+    <aura:attribute name="manageFeatures" type="boolean"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <lightning:card>
+        <aura:if isTrue="{!v.activated}">
+            <lightning:formattedText value="Please rate this feature."/>
+            <lightning:layout>
+                <aura:iteration items="{!v.ratings}" var="rating" indexVar="index">
+                    <lightning:layoutItem padding="around-small">
+                        <lightning:buttonIconStateful name="{!index}" iconName="utility:like" selected="{!rating}" onclick="{!c.handleLike}"/>
+                    </lightning:layoutItem>
+                </aura:iteration>
+            </lightning:layout>        
+        </aura:if>
+        <aura:if isTrue="{!v.manageFeatures}">
+            <lightning:input type="toggle" label="Feature" checked="{!v.activated}"/>
+        </aura:if>
+        <aura:if isTrue="{!v.manageFeatures==false}">
+            <aura:if isTrue="{!v.activated==false}">
+                <lightning:formattedText value="This feature is not active consult with your administrator."/>
+            </aura:if>
+        </aura:if>
+    </lightning:card>    
+</aura:component>	
