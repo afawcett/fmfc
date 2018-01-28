@@ -8,10 +8,8 @@ public with sharing class FeatureFeedbackControllerTest {
         FeatureFeedbackController.FeatureInfo fi = 
             FeatureFeedbackController.getFeatureInfo('WidgetAnalysis');
         Test.stopTest();
-        System.assertEquals(true, fi.canManage);
-        System.assertEquals(true, fi.active);            
         System.assertEquals(2, fi.userRating);
         System.assertEquals(Integer.valueOf(1), FeatureManagement.checkPackageIntegerValue('WidgetAnalysisCount'));
-        System.assertEquals(Integer.valueOf(2), FeatureManagement.checkPackageIntegerValue('WidgetAnalysisScore'));
+        System.assertEquals(Integer.valueOf(20), FeatureManagement.checkPackageIntegerValue('WidgetAnalysisScore'));
     }
 }
