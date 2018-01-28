@@ -5,11 +5,13 @@
         <p class="slds-p-horizontal_small">
             <div>
                 <aura:if isTrue="{!v.featureActive}">
-                    <ltng:require scripts="{!$Resource.ChartJS}" afterScriptsLoaded="{!c.chartJSLoaded}" />
+                    <ltng:require scripts="{!$Resource.ChartJS}" 
+                        afterScriptsLoaded="{!c.chartJSLoaded}" />
                     <canvas aura:id="chart" height="280"></canvas>
                 </aura:if>            
             </div>
-            <c:featureFeedback feature="WidgetAnalysis" activated="{!v.featureActive}"/>
+            <c:featureFeedback feature="WidgetAnalysis" 
+                activated="{!v.featureActive}"/>
         </p>
     </lightning:card>    
 </aura:component>	
