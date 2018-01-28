@@ -53,11 +53,11 @@
         <visibility>Visible</visibility>
     </tabSettings>
     <tabSettings>
-        <tab>WidgetOverview</tab>
+        <tab>Widget__c</tab>
         <visibility>Visible</visibility>
     </tabSettings>
     <tabSettings>
-        <tab>Widget__c</tab>
+        <tab>WidgetsOverview</tab>
         <visibility>Visible</visibility>
     </tabSettings>
 </PermissionSet>
