@@ -7,7 +7,7 @@
     <label>Widget App</label>
     <navType>Standard</navType>
     <tab>Widget__c</tab>
-    <tab>Widget_Analysis</tab>
+    <tab>WidgetOverview</tab>
     <tab>Feature__c</tab>
     <uiType>Lightning</uiType>
     <utilityBar>Features_UtilityBar</utilityBar>
