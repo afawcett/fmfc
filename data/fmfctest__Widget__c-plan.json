@@ -1,28 +1,10 @@
-{
-    "records": [
-        {
-            "attributes": {
-                "type": "fmfctest__Widget__c",
-                "referenceId": "fmfctest__Widget__cRef1"
-            },
-            "Name": "Bluetooth Toothbrush",
-            "fmfctest__QuantitySold__c": 20
-        },
-        {
-            "attributes": {
-                "type": "fmfctest__Widget__c",
-                "referenceId": "fmfctest__Widget__cRef2"
-            },
-            "Name": "Bluetooth Dog Feeder",
-            "fmfctest__QuantitySold__c": 40
-        },
-        {
-            "attributes": {
-                "type": "fmfctest__Widget__c",
-                "referenceId": "fmfctest__Widget__cRef3"
-            },
-            "Name": "Bluetooth Headset",
-            "fmfctest__QuantitySold__c": 5
-        }
-    ]
-}
+[
+    {
+        "sobject": "fmfctest__Widget__c",
+        "saveRefs": true,
+        "resolveRefs": false,
+        "files": [
+            "fmfctest__Widget__cs.json"
+        ]
+    }
+]
