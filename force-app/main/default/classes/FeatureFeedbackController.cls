@@ -1,6 +1,11 @@
 public with sharing class FeatureFeedbackController {
 
     @AuraEnabled
+    public static void toggleFeature(String featureName, Boolean active) {
+        FeatureManagement.setPackageBooleanValue(featureName, active);
+    }
+
+    @AuraEnabled
     public static FeatureInfo getFeatureInfo(String featureName) {
         try {
             // Determine enablement status and any prior feedback score from this user

@@ -16,7 +16,7 @@
             </lightning:layout>        
         </aura:if>
         <aura:if isTrue="{!v.manageFeatures}">
-            <lightning:input type="toggle" label="Feature" checked="{!v.activated}"/>
+            <lightning:input aura:id="toggleActive" type="toggle" label="Feature" checked="{!v.activated}" onchange="{!c.activeChanged}"/>
         </aura:if>
         <aura:if isTrue="{!v.manageFeatures==false}">
             <aura:if isTrue="{!v.activated==false}">

@@ -21,7 +21,22 @@
             }
         });
         $A.enqueueAction(action);
-    },    
+    }, 
+    activeChanged : function(cmp, event, helper) {
+        var toggleActive = cmp.find('toggleActive');
+        var action = cmp.get("c.toggleFeature");        
+        action.setParams({ 
+            featureName : cmp.get("v.feature"),
+            active : toggleActive.get('v.checked') });
+        action.setCallback(this, function(response) {
+            var state = response.getState();
+            if (state != "SUCCESS") {
+                // TODO: Better error handling, https://developer.salesforce.com/blogs/2017/09/error-handling-best-practices-lightning-apex.html
+                console.log(response.getError());                
+            }
+        });
+        $A.enqueueAction(action);        
+    },
     handleLike : function(cmp, event, helper) {
         // Update the UI
         var score = event.getSource().get('v.name');
