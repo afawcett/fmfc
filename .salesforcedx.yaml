@@ -1,9 +1,9 @@
 scratch-org-def: config/project-scratch-def.json
-  assign-permset: true
-  permset-name: WidgetAppAdmin
-  run-apex-tests: true
-  delete-scratch-org: false
-  show-scratch-org-url: true
-  open-path: c/WidgetApp.app
-  data-plans:
-    - ./data/fmfctest__Widget__c-plan.json
+assign-permset: true
+permset-name: WidgetAppAdmin
+run-apex-tests: true
+delete-scratch-org: false
+show-scratch-org-url: true
+open-path: c/WidgetApp.app
+data-plans:
+- ./data/fmfctest__Widget__c-plan.json
